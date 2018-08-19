@@ -1,0 +1,284 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Deedy - One Page Two Column Resume
+% LaTeX Template
+% Version 1.2 (16/9/2014)
+%
+% Original author:
+% Debarghya Das (http://debarghyadas.com)
+% Original repository: https://github.com/deedydas/Deedy-Resume
+%
+% IMPORTANT: THIS TEMPLATE NEEDS TO BE COMPILED WITH XeLaTeX
+%
+% This template uses several fonts not included with Windows/Linux by
+% default. If you get compilation errors saying a font is missing, find the line
+% on which the font is used and either change it to a font included with your
+% operating system or comment the line out to use the default font.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% 
+% TODO:
+% 1. Integrate biber/bibtex for article citation under publications.
+% 2. Figure out a smoother way for the document to flow onto the next page.
+% 3. Add styling information for a "Projects/Hacks" section.
+% 4. Add location/address information
+% 5. Merge OpenFont and MacFonts as a single sty with options.
+% 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% CHANGELOG:
+% v1.1:
+% 1. Fixed several compilation bugs with \renewcommand
+% 2. Got Open-source fonts (Windows/Linux support)
+% 3. Added Last Updated
+% 4. Move Title styling into .sty
+% 5. Commented .sty file.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+% Known Issues:
+% 1. Overflows onto second page if any column's contents are more than the
+% vertical limit
+% 2. Hacky space on the first bullet point on the second column.
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\documentclass[]{deedy-resume}
+\usepackage{fancyhdr}
+ 
+\pagestyle{fancy}
+\fancyhf{}
+ 
+\rfoot{Page \thepage \hspace{1pt}} % chktex 1
+\begin{document}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     LAST UPDATED DATE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \lastupdated % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     TITLE NAME
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\namesection{Ekansh}{Vinaik}{\urlstyle{same}
+% 301.326.9611 | \href{mailto:ekansh.vinaik@gmail.com}{ekansh.vinaik@gmail.com} \\
+\href{mailto:ekansh.vinaik@gmail.com}{ekansh.vinaik@gmail.com} | 301.326.9611 \\
+% \href{http://ekanshvinaik.com}{ekanshvinaik.com}
+% | \href{http://github.com/evinaik}{github.com/evinaik}\\
+}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN ONE
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t][.7\textheight][t]{0.33\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EDUCATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Education} 
+
+\subsection{University of Maryland}
+\descript{BS in Computer Science}
+\location{May 2020 | College Park, MD}
+Minor in Statistics \\
+Computer Science Honors \\
+Business Honors (QUEST)  \\
+\location{Cum. GPA\@: 3.96 / 4.0}
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LINKS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Links} 
+Personal:// \href{http://ekanshvinaik.com}{\bf ekanshvinaik.com} \\
+GitHub:// \href{https://github.com/evinaik}{\bf evinaik} \\
+LinkedIn://  \href{https://www.linkedin.com/in/evinaik}{\bf evinaik} \\
+\sectionsep % chktex 1
+% Twitter://  \href{https://twitter.com/debarghya_das}{\bf @debarghya\_das} \\
+
+% \vfill
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     SKILLS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Skills}
+\subsection{Technical}
+\textbf{Proficient} \\
+Java \textbullet{} Python \textbullet{} Go \textbullet{} C \\
+\textbf{Familiar} \\
+Javascript \textbullet{}  OCaml \textbullet{} Ruby \\
+WebGL \textbullet{} Shell \textbullet{} \LaTeX \\ % chktex 1
+\textbf{Technologies} \\
+Linux \textbullet{} Pandas \textbullet{} Git \textbullet{} \\ % chktex 1
+AWS Cloud Certification \\
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     COURSEWORK
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Coursework}
+Data Science \\
+Machine Learning \\
+Quantum Physics \\
+Design and Quality \\
+Systems Thinking \\
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     AWARDS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Awards}
+Capital One Software Engineering \\
+\hspace{4pt} Summit: Top 40 / 800 \\
+Deloitte Case Competition: \( 3\textsuperscript{rd} \) place \\
+Hoya Hacks: Best Internet-Sourced \\
+\hspace{4pt} App, Best Entrepreneurship App \\
+President's Scholarship \\
+Dean's List \\
+\sectionsep % chktex 1
+
+\section{Activities}
+RedBlack Consulting \\
+Kappa Theta Pi \\
+QUEST Corporate \\
+Design Team Mentor \\
+MZZ Ventures \\
+% May 2017 &–& Present & Development Lead & QUESTDev Team \\
+\sectionsep % chktex 1
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%
+%     COLUMN TWO
+%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\end{minipage} 
+\hfill
+\begin{minipage}[t]{0.66\textwidth} 
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Experience}
+\runsubsection{Capital One Labs}
+\descript{| Software Engineering Intern }
+\location{June 2018 – Aug 2018 | New York, NY}
+\vspace{\topsep} % Hacky fix for awkward extra vertical space
+\begin{tightemize}
+% \item Simplified Jenkins usage by writing a Go based command line tool interfacing with its API
+\item Created a Go-based command line tool similar to Git to expedite pipeline usage with reduced errors
+% \item Reduce time spent context switching and on the Jenkins site by writing a Go based command line alternative
+\item Developed a framework in Groovy to trace pipeline stacks and perform dry runs for testing
+\item Abstracted low level Jenkins commands behind an API to enhance development workflows for engineers
+% \item Reduced job transfer time between development, QA, and production servers by \~50\% (averaging 45 seconds down to 20)
+\end{tightemize}
+\sectionsep % chktex 1
+
+\runsubsection{Amazon Web Services}
+\descript{| Software Engineering Intern }
+\location{Jan 2018 – Apr 2018 | Herndon, VA}
+\begin{tightemize}
+\item Detected performance inconsistencies (drift) and their root causes automatically across different AWS regions in 2700+ pipelines
+\item Designed a scalable system with Java to notify development teams of drift with latency measured in seconds
+\item Visualized drift in a reactive and live user interface designed to be accessible to anyone in the organization
+\end{tightemize}
+\sectionsep % chktex 1
+
+\runsubsection{Capital One}
+\descript{| Software Engineering Intern }
+\location{Jun 2017 – Aug 2017 | Wilmington, DE}
+\begin{tightemize}
+\item Restructured enterprise servicing software with React.js and Node.js to improve startup speeds by 96\% (30 minutes down to 60 seconds)
+% \item Improved startup speed of enterprise servicing software by 93\% from 30 minutes to under 60 seconds by shifting the tech stack to React.js
+\item Redesigned the software's secret management during the rewrite of an encryption library for customer IDs
+% \item Ensured the backend of the software was maintainable by using a continuous integration, continuous deployment strategy
+\end{tightemize}
+\sectionsep % chktex 1
+
+\runsubsection{UMD CS Department}
+\descript{| Teaching Asst.}
+\location{Aug 2018 – Present | College Park, MD}
+\begin{tightemize}
+\item Taught recitations and held office hours for Algorithms (CMSC351), a core course emphasizing algorithmic techniques and analysis
+% \item Improved startup speed of enterprise servicing software by 93\% from 30 minutes to under 60 seconds by shifting the tech stack to React.js
+% \item Redesigned the software's secret management during the rewrite of an encryption library for customer IDs
+% \item Ensured the backend of the software was maintainable by using a continuous integration, continuous deployment strategy
+\end{tightemize}
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     RESEARCH
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Research}
+\runsubsection{Maryland Blended Reality Center}
+\descript{| Research Asst.}
+\location{Jan 2018 – Present | College Park, MD}
+Worked with \textbf{\href{https://www.cs.umd.edu/~varshney/}{Prof. Amitabh Varshney}} to create a proof of concept WebGL based virtual reality player that supports 8K resolution. Determined medically proven biases in 1500+ police officers with virtual reality simulations.
+\sectionsep % chktex 1
+
+\runsubsection{Solway Lab}
+\descript{| Research Asst.}
+\location{Jan 2018 – Aug 2018 | College Park, MD}
+Researched OCD's effect on decision-making and information processing with \textbf{\href{http://solwaylab.org/people/}{Prof. Alec Solway}} using a Javascript dot matrix experiment on AWS Turk.
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PROJECTS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\section{Projects}
+\runsubsection{DiscoVR}
+\descript{}
+\location{Feb 2018 – Apr 2018}
+Led a team of five to prototype an interactive virtual reality application that mimics a famous memory technique (`method of loci').
+\sectionsep % chktex 1
+
+\runsubsection{PolitiGlobe}
+\descript{}
+\location{Oct 2016 – Nov 2016}
+Built a globe in WebGL with geolocated tweets about political candidates with visualizations of follower counts and sentiment.
+\sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     LEADERSHIP
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Leadership}
+% \begin{tabular}{lrrcl}
+%         Teaching Asst. & Algorithms (CMSC 351) & Aug 2018 &–& Present \\
+%         Recruitment Committee & Kappa Theta Pi & Feb 2018 &–& Present \\
+%         Fintech Lead & MZZ Ventures & Aug 2017 &–& Present \\
+%         % May 2017 &–& Present & Development Lead & QUESTDev Team \\
+%         Data Consultant & RedBlack Consulting & Jan 2017 &–& Dec 2017 \\
+% \end{tabular}
+% \begin{tabular}{lcrlr}
+%         Aug 2018 &–& Present & Teaching Asst. & Algorithms (CMSC 351) \\
+%         Feb 2018 &–& Present & Recruitment Committee & Kappa Theta Pi \\
+%         Aug 2017 &–& Present & Fintech Lead & MZZ Ventures \\
+%         % May 2017 &–& Present & Development Lead & QUESTDev Team \\
+%         Jan 2017 &–& Dec 2017& Data Consultant & RedBlack Consulting \\
+% \end{tabular}
+% \sectionsep % chktex 1
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%     PUBLICATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \section{Publications} 
+% \renewcommand\refname{\vskip -1.5cm} % Couldn't get this working from the .cls file
+
+\end{minipage} 
+\end{document}  \documentclass[]{article}
